@@ -21,43 +21,31 @@
         </p>
     </div>
     <div class="card-footer text-muted">
-      <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        </ul>
-      </div>
-      <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        </ul>
-      </div>
-      <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Sexo
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="#">Hombre</a></li>
-          <li><a class="dropdown-item" href="#">Mujer</a></li>
-        </ul>
-      </div>
-      <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        </ul>
-      </div>
+      <form action="/" method="POST">
+        <select class="form-select" aria-label="Default select example" name="2">
+          <option selected>Municipio</option>
+          <option value="1">Mujer</option>
+          <option value="2">Hombre</option>
+        </select>
+        <select class="form-select" aria-label="Default select example" name="3">
+          <option selected>Edad</option>
+          <option value="1">Mujer</option>
+          <option value="2">Hombre</option>
+        </select>
+        <select name="Sexo" class="form-select" aria-label="Default select example">
+          <option selected >Sexo</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Hombre">Hombre</option>
+        </select>
+        <select name="Estado" class="form-select" aria-label="Default select example">
+          <option selected>Estado</option>
+          <option value="Fallecido">Fallecido</option>
+          <option value="Leve">Leve</option>
+        </select>
+        <button type="submit" class="btn btn-success">Filtrar</button>
+      </form>
     </div>
+    
     <div class="card-body">
       <table class="table table-striped">
         <thead>
