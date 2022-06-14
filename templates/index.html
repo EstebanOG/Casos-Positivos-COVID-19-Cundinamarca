@@ -22,28 +22,55 @@
     </div>
     <div class="card-footer text-muted">
       <form action="/" method="POST">
-        <select class="form-select" aria-label="Default select example" name="2">
-          <option selected>Municipio</option>
-          <option value="1">Mujer</option>
-          <option value="2">Hombre</option>
-        </select>
-        <select class="form-select" aria-label="Default select example" name="3">
-          <option selected>Edad</option>
-          <option value="1">Mujer</option>
-          <option value="2">Hombre</option>
-        </select>
-        <select name="Sexo" class="form-select" aria-label="Default select example">
-          <option selected >Sexo</option>
-          <option value="Mujer">Mujer</option>
-          <option value="Hombre">Hombre</option>
-        </select>
-        <select name="Estado" class="form-select" aria-label="Default select example">
-          <option selected>Estado</option>
-          <option value="Fallecido">Fallecido</option>
-          <option value="Leve">Leve</option>
-        </select>
-        <button type="submit" class="btn btn-success">Filtrar</button>
-      </form>
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm">
+            <p>Municipio</p>
+            <select name="Municipio" class="form-select" aria-label="Default select example">
+              <option selected>Municipio</option>
+              {% for mun in municipios %}
+              <option value='{{mun}}'>{{mun}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-sm">
+            <p>Edad</p>
+            <select name="Edad" class="form-select" aria-label="Default select example">
+              <option selected>Edad</option>
+              <option value="PrimeraInfancia">0 - 5 años</option>
+              <option value="Infancia">6 - 11 años</option>
+              <option value="Adolescencia">12 - 18 años</option>
+              <option value="Juventud">19 - 26 años</option>
+              <option value="Adultez">27-59 años</option>
+              <option value="PersonaMayor">60 años o más</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <p>Sexo</p>
+            <select name="Sexo" class="form-select" aria-label="Default select example">
+              <option selected >Sexo</option>
+              <option value="Mujer">Mujer</option>
+              <option value="Hombre">Hombre</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <p>Estado</p>
+            <select name="Estado" class="form-select" aria-label="Default select example">
+              <option selected>Estado</option>
+              <option value="Fallecido">Fallecido</option>
+              <option value="Leve">Leve</option>
+            </select>
+          </div>
+          <div class="col align-self-end">
+            <button type="submit" class="btn btn-success">Filtrar</button>
+          </div>
+          
+        </div>
+        
+        </form>
+      </div>
+        
     </div>
     
     <div class="card-body">
